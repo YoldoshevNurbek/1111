@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: serif;
+}
+header nav{
+    background: rgb(245, 245, 245);
+    width: 100%;
+    height: 80px;
+}
+header nav .logo{
+    color: black;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 0 40px;
+    font-weight: bold;
+}
+header nav ul {
+    float: right;
+    margin-right: 20px;
+}
+header nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+header nav ul li a{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 11;
+}
+header nav ul li a:hover{
+    color:blue;
+    transition: .4s
+}
+header nav .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+header nav #check{
+    display: none;
+}
+
+.section1{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: wheat;
+    background-attachment: fixed;
+    height: 67vh;
+    width: 100%;
+}
+.section1 .container h1{
+    line-height: 40px;
+    margin-top: 75px;
+    letter-spacing: .8px;
+}
+.section1 .container p{
+    width: 650px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.section1 .container a:hover{
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+}
+.section1 .container a{
+    display: inline-block;
+    color: white;
+    background:rgb(7, 43, 145);
+    padding: 7px 17px;
+    margin-top:20px;
+    border-radius: 5px;
+    border: 1px solid rebeccapurple;
+    transition: .5s ease-in;
+    font-weight: 700;
+}   
+/* section2 start */
+.section2{
+    background: rgb(95, 95, 212);
+}
+.section2 .sec-info{
+    text-align: center; 
+    padding:40px 0 40px 0;
+}
+.section2 .container{
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.section2 .container .content{
+    width: 320px;
+    padding: 0 10px;
+    text-align: center;
+}
+.section2 .container .content-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+.section2 .container .content .content-info{
+    padding: 15px 10px;
+}
+.section2 .container .content .content-info h4{
+    line-height: 30px;
+    font-size: 17px;
+}
+.section2 .container .content .content-info p{
+    line-height: 21px;
+}
+.section2 .container .content .content-info .info-btn:hover{
+    background: white;
+}
+.section2 .container .content .content-info .info-btn{
+    display: inline-block;
+    padding: 7px 25px;
+    margin: 15px 0 35px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: black;
+    background: transparent;
+    border: 1px solid black;
+    transition: .5s ease-in;
+}
+/* section About */
+.about{
+    width: 100%;
+}
+.about .container{
+    width: 1320px;
+    display: flex;
+    justify-content: center;
+}
+.about .container .content{
+    width: 100%;
+    margin: 35px 128px;
+    display: flex;
+    justify-content: space-between;
+}
+.about .container .content-right{
+    width: 550px;
+}
+.about .container .content-left{
+    width: 450px;
+    padding: 50px 0;
+}
+.about .container .content-left h2{
+    padding: 25px 0;
+}
+.about .container .content-left p{
+    width: 100%;
+    line-height: 35px;
+}
+.about .container .content-right img:hover{
+    transform: scale(95%);
+}
+.about .container .content-right img{
+    width: 100%;
+    height: 555px;
+    border-radius: 35px;
+    transition: 1s ease-in;
+    object-fit: cover;
+}
+/* wow js */
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+@media (max-width:991px) {
+    header nav .logo{
+        font-size: 20px;
+    }
+    header nav ul li a{
+        font-size: 13px;
+    }
+    .section1 .container h1 {
+        line-height: 54px;
+        margin-top: 45px;
+        letter-spacing: 0;
+    }
+    .section1 .container p{
+        width: 550px;
+        letter-spacing: 0;
+    }
+    .section2 .container {
+        width: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media (max-width:576px) {
+    header nav .checkbtn{
+        display: block;
+    }
+    header nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(1, 1, 1);
+        z-index: 1;
+        opacity: 70%;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    header nav ul li{
+        display: block;
+    }
+    header nav ul li a{
+        font-size: 17px;
+        font-weight:900;
+        letter-spacing: 1.5px;
+        color: white;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    .section1{
+        height: 65vh;
+        padding-top: 50px;
+    }
+    .section1 .container h1 {
+        line-height: 54px;
+        margin-top: 50px;
+        letter-spacing: 0;
+    }
+    .section1 .container p{
+        width: 400px;
+        letter-spacing: 0;
+    }
+    .section2 .container {
+        width: 0;
+        display: flex;
+        align-content: center;
+        text-align: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .container{
+        width: 405px;
+        margin: auto;
+    }
+    .about .container .content{
+        padding: 35px auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .container .content-right{
+        width: 405px;
+    }
+    .about .container .content-left{
+        width: 400px;
+        line-height: 25px;
+    }
+}
